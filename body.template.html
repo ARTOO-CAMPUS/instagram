@@ -1,0 +1,20 @@
+<div ng-hide="dettaglioFoto" class="col-md-4" ng-repeat="foto in listaFoto | filter:cerca" ng-click="dettaglio($index)">
+	<div class="nome">{{foto.nome}}</div>
+	<div class="image">
+		<img ng-src="{{foto.image}}" alt="" width="150px" />
+	</div>
+	<div class="hash">
+		<span style="margin-left:10px;" ng-repeat="hash in foto.hashtag">#{{hash}}   </span>
+	</div>
+</div>
+
+<!--//DETTAGLIO-->
+<div ng-show="dettaglioFoto" class="col-md-12">
+	<div class="nome">{{dettaglioFoto.nome}}</div>
+	<div class="image">
+		<img ng-src="{{dettaglioFoto.image}}" alt="" width="150px" />
+	</div>
+	<div class="hash">
+		<span style="margin-left:10px;" ng-repeat="hash in dettaglioFoto.hashtag">#{{hash}}   </span>
+	</div>
+</div>
